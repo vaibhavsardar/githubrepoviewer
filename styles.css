@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a:link{
+    text-decoration: none;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.repository {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+#pagination {
+     padding-top: 30px;
+     border: none;
+     cursor: pointer;
+     position: absolute;
+     bottom: 5px;
+     right: 338px;
+     /* width: 1000px; */
+    
+}
+
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 4px;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 50px;
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+ div.content {
+    margin-left: 300px;
+    padding: 1px 16px;
+  
+    height: 1000px;
+  }  
+
+  #loading {
+    width: 5rem;
+    height: 5rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #9c41f2;
+    border-radius: 100%;
+    margin: auto;
+    visibility:hidden;
+    animation: spin 1s infinite linear;
+    position: fixed;
+    z-index: 100;
+    top: 40%;
+    left: 50%;
+}
+#loading.display {
+    visibility: visible;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* pagination */
+.current {
+    background-color: #6fdc73!important;
+    color: white;
+}
+.pagination {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+}
+
+.pagination button {
+   
+    padding: 8px 12px;
+    border: 1px solid #adabab;
+    background-color: #6c757d;
+    color: #fbfafa;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.pagination button:hover {
+    background-color: #ddd;
+    color: #0b0b0b;
+}
+
