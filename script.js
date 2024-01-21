@@ -17,7 +17,7 @@ function loaddata () {
     const username= new URLSearchParams(window.location.search).get("username");
     let response = await fetch(`https://api.github.com/repos/${username}/${reponame}/languages`,{
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer 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`,
         },
       })
      return await response.json()
@@ -32,7 +32,7 @@ function searchRepositories(currentPage,perPage) {
 
     fetch(`https://api.github.com/users/${username}`,{
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer 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`,
         },
       })
     .then(response => response.json())
@@ -41,7 +41,7 @@ function searchRepositories(currentPage,perPage) {
 
     fetch(apiUrl,{
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer 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`,
         },
       })
         .then(response => response.json())
