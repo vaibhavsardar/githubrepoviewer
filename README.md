@@ -1,4 +1,4 @@
-# GitHub Repository Viewer Project
+# GitHub Repository Viewer 
 
 Welcome to the GitHub Repository Viewer project! This project allows users to view details of GitHub repositories in a user-friendly interface.
 
