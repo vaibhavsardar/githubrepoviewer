@@ -5,6 +5,9 @@ function setUserName() {
     window.location.href = `listing.html?username=${username}`;
     
 };
+const encodedToken = 'g?ithub_pat_11AOMVDMI0?rerjv7K6roNR_3YKgvuhEphT1F9BjDLmy?hoBqLG0VNKjx0o?MovIlurOgQNTWHZ3SvT1dzBks?'
+
+
 
 
 function loaddata () {
@@ -14,16 +17,18 @@ function loaddata () {
 }
 
  async function getRepolang(reponame) {
+    const decodedToken = encodedToken.replaceAll('?', '')
     const username= new URLSearchParams(window.location.search).get("username");
     let response = await fetch(`https://api.github.com/repos/${username}/${reponame}/languages`,{
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer  ${decodedToken}`,
         },
       })
      return await response.json()
 }
 
 function searchRepositories(currentPage,perPage) {
+    const decodedToken = encodedToken.replaceAll('?', '')
     displayLoading()
    const username= new URLSearchParams(window.location.search).get("username")
     
@@ -32,7 +37,7 @@ function searchRepositories(currentPage,perPage) {
 
     fetch(`https://api.github.com/users/${username}`,{
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer ${decodedToken}`,
         },
       })
     .then(response => response.json())
@@ -41,7 +46,7 @@ function searchRepositories(currentPage,perPage) {
 
     fetch(apiUrl,{
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer  ${decodedToken}`,
         },
       })
         .then(response => response.json())
